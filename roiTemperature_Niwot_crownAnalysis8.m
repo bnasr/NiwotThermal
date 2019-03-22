@@ -9,21 +9,34 @@
 clear
 clc
 
-codeDir = '/Users/donald/Documents/Research Data/Code/Matlab Code/FLIR Image Processing';
-imgDir = {'/Users/donald/Documents/Research Data/FLIR Camera/All Data/FLIR3 - 2015 Master Collection',...
-    '/Users/donald/Documents/Research Data/FLIR Camera/All Data/FLIR3 - 2016 Master Collection',...
-    '/Users/donald/Documents/Research Data/FLIR Camera/All Data/FLIR3 - 2017 Master Collection'};
+ 
+codeDir = '/mnt/monsoon/datarepo/Niwot Project/';
+
+imgDir = {'/mnt/monsoon/datarepo/Niwot Project/data/seq/2015',...
+     '/mnt/monsoon/datarepo/Niwot Project/data/seq/2016',...
+    '/mnt/monsoon/datarepo/Niwot Project/data/seq/2017'};
 yy = [2015; 2016; 2017];
 currentYear = 2017; % most recent year that has not had the datetimestamp corrected to local standard time
-loggerFile1 = '/Users/donald/Documents/Research Data/Data Loggers/Niwot/CR1000_stats.dat';
-loggerFile2 = '/Users/donald/Documents/Research Data/Data Loggers/Niwot/CR800_stats.dat';
-loggerFile3 = '/Users/donald/Documents/Research Data/Data Loggers/Niwot/climate_2015_ver.2016.06.09.dat';
-loggerFile4 = '/Users/donald/Documents/Research Data/Data Loggers/Niwot/climate_2016_ver.2017.09.15.dat';
-loggerFile5 = '/Users/donald/Documents/Research Data/Data Loggers/Niwot/climate_2017_ver.2017.09.25.dat';
-snowFile = '/Users/donald/Documents/Research Data/Niwot projects/snow data analysis/snowFlagData.txt';
-distanceMapFile = '/Users/donald/Documents/Research Data/Niwot projects/2015-09-15 pointcloud/20150915_niwotPixelDistances.mat';
-roiFile = {'niwotflir_F2.mat';'niwotflir_F3.mat';'niwotflir_P2.mat';'niwotflir_P3.mat';...
-    'niwotflir_S1.mat';'niwotflir_S3.mat';'niwotflir_referencePlate.mat'};
+
+loggerFile1 = '/mnt/monsoon/datarepo/Niwot Project/data/CR1000_stats.dat';
+loggerFile2 = '/mnt/monsoon/datarepo/Niwot Project/data/CR800_stats.dat';
+
+loggerFile3 = '/mnt/monsoon/datarepo/Niwot Project/data/climate_2015_ver.2018.11.28.dat';
+loggerFile4 = '/mnt/monsoon/datarepo/Niwot Project/data/climate_2016_ver.2018.11.28.dat';
+loggerFile5 = '/mnt/monsoon/datarepo/Niwot Project/data/climate_2017_ver.2018.11.28.dat';
+
+snowFile = '/mnt/monsoon/datarepo/Niwot Project/data/snow data analysis/snowFlagData.txt';
+
+distanceMapFile = '/mnt/monsoon/datarepo/Niwot Project/data/2015-09-15 pointcloud/20150915_niwotPixelDistances.mat';
+
+roiFile = {'/mnt/monsoon/datarepo/Niwot Project/data/thermal data analysis/niwotflir_F2.mat';...
+    '/mnt/monsoon/datarepo/Niwot Project/data/thermal data analysis/niwotflir_F3.mat';...
+    '/mnt/monsoon/datarepo/Niwot Project/data/thermal data analysis/niwotflir_P2.mat';...
+    '/mnt/monsoon/datarepo/Niwot Project/data/thermal data analysis/niwotflir_P3.mat';...
+    '/mnt/monsoon/datarepo/Niwot Project/data/thermal data analysis/niwotflir_S1.mat';...
+    '/mnt/monsoon/datarepo/Niwot Project/data/thermal data analysis/niwotflir_S3.mat';...
+    '/mnt/monsoon/datarepo/Niwot Project/data/thermal data analysis/niwotflir_referencePlate.mat'};
+
 objectEmissivity = 0.97;
 applyCorrections = true;
 minSolarElevation = 0;
